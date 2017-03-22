@@ -1,35 +1,32 @@
-package net.serenitybdd.tutorials.features.navigation;
+package co.ceiba.sincronizar;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
+import co.ceiba.sincronizar.steps.NavigatingSync;
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.serenitybdd.tutorials.steps.NavigatingUser;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 
-/**
- * Created by john on 9/05/2016.
- */
 @RunWith(SerenityRunner.class)
-public class WhenBrowsingProductCategories {
+public class WhenUseSyncOption {
 
     @Steps
-    NavigatingUser mark;
+    NavigatingSync navigatingSync;
 
     @Managed(driver="chrome")
     WebDriver browser;
 
     @Test
-    public void shouldBeAbleToNavigateToTheMotorsCategory() {
+    public void shouldBeAbleToClickToTheOptionSync() {
         // Given
-        mark.isOnTheHomePage();
+    	navigatingSync.isOnTheSyncPage();
 
         // When
-        mark.click();
+    	navigatingSync.clickButtonSync();
 
         // Then
-        mark.hola();
+    	navigatingSync.titleWillBe("Familia");
     }
 }
