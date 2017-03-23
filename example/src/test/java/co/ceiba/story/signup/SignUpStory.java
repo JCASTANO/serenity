@@ -1,10 +1,10 @@
-package co.ceiba.story.sync;
+package co.ceiba.story.signup;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import co.ceiba.step.sync.SignUpStep;
+import co.ceiba.step.signup.SignUpStep;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;

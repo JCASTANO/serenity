@@ -1,8 +1,8 @@
-package co.ceiba.step.sync;
+package co.ceiba.step.signup;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import co.ceiba.ui.sync.SignUpPage;
+import co.ceiba.ui.signup.SignUpPage;
 import net.thucydides.core.annotations.Step;
 
 public class SignUpStep {
