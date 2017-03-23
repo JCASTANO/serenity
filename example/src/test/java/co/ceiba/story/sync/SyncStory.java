@@ -13,7 +13,7 @@ import net.thucydides.core.annotations.Steps;
 public class SyncStory {
 
     @Steps
-    SyncStep navigatingSync;
+    SyncStep syncStep;
 
     @Managed(driver="chrome")
     WebDriver browser;
@@ -21,12 +21,12 @@ public class SyncStory {
     @Test
     public void shouldBeAbleToClickToTheOptionSync() {
         // Given
-    	navigatingSync.isOnTheSyncPage();
+    	syncStep.isOnTheSyncPage();
 
         // When
-    	navigatingSync.clickButtonSync();
+    	syncStep.clickButtonSync();
 
         // Then
-    	navigatingSync.titleWillBe("Familia");
+    	syncStep.titleWillBe("Familia");
     }
 }
