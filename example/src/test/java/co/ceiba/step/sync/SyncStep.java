@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import co.ceiba.ui.sync.SyncPage;
 import net.thucydides.core.annotations.Step;
 
-public class NavigatingSync {
+public class SyncStep {
 
 	SyncPage syncPage;
 

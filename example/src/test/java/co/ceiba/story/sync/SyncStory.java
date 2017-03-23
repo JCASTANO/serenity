@@ -1,19 +1,19 @@
-package co.ceiba.feature.sync;
+package co.ceiba.story.sync;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import co.ceiba.step.sync.NavigatingSync;
+import co.ceiba.step.sync.SyncStep;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 
 @RunWith(SerenityRunner.class)
-public class WhenUseSyncOption {
+public class SyncStory {
 
     @Steps
-    NavigatingSync navigatingSync;
+    SyncStep navigatingSync;
 
     @Managed(driver="chrome")
     WebDriver browser;
