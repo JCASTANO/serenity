@@ -1,8 +1,8 @@
-package co.ceiba.sincronizar.steps;
+package co.ceiba.step.sync;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import co.ceiba.sincronizar.ui.SyncPage;
+import co.ceiba.ui.sync.SyncPage;
 import net.thucydides.core.annotations.Step;
 
 public class NavigatingSync {

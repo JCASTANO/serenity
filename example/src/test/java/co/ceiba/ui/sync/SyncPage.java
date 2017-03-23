@@ -1,4 +1,4 @@
-package co.ceiba.sincronizar.ui;
+package co.ceiba.ui.sync;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.PageObject;
