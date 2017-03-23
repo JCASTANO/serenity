@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import co.ceiba.step.actor.ClickSync;
+import co.ceiba.step.actor.ClickSignUp;
 import co.ceiba.step.actor.OpenTheApplication;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
@@ -22,7 +22,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 
 @RunWith(SerenityRunner.class)
-public class SyncStory {
+public class SignUpStory {
 	
 	Actor juan = Actor.named("Juan");
 
@@ -30,20 +30,20 @@ public class SyncStory {
     OpenTheApplication openTheApplication;
     
     @Steps
-    ClickSync clickSync;
+    ClickSignUp clickSignUp;
 
     @Managed(driver="chrome")
     WebDriver browser;
     
     @Before
-    public void annaCanBrowseTheWeb() {
+    public void juanCanBrowseTheWeb() {
         juan.can(BrowseTheWeb.with(browser));
     }
 
     @Test
-    public void shouldBeAbleToClickToTheOptionSync() {
+    public void shouldBeAbleToClickToTheOptionSignUp() {
     	 givenThat(juan).wasAbleTo(openTheApplication);
-    	 when(juan).attemptsTo(clickSync);
-    	 then(juan).should(eventually(seeThat(TheWebPage.title(), containsString("Familia"))));
+    	 when(juan).attemptsTo(clickSignUp);
+    	 then(juan).should(eventually(seeThat(TheWebPage.title(), containsString("Join GitHub · GitHub"))));
     }
 }

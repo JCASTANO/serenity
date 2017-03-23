@@ -4,29 +4,29 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import co.ceiba.step.sync.SyncStep;
+import co.ceiba.step.sync.SignUpStep;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 
 @RunWith(SerenityRunner.class)
-public class SyncStory {
+public class SignUpStory {
 
     @Steps
-    SyncStep syncStep;
+    SignUpStep signUpStep;
 
     @Managed(driver="chrome")
     WebDriver browser;
 
     @Test
-    public void shouldBeAbleToClickToTheOptionSync() {
+    public void shouldBeAbleToClickToTheOptionSignUp() {
         // Given
-    	syncStep.isOnTheSyncPage();
+    	signUpStep.isOnTheSignUpPage(); 
 
         // When
-    	syncStep.clickButtonSync();
+    	signUpStep.clickButtonSignUp();
 
         // Then
-    	syncStep.titleWillBe("Familia");
+    	signUpStep.titleWillBe("Join GitHub · GitHub");
     }
 }
